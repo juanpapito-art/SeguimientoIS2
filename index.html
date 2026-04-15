@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PySL - Prevención y Seguridad Locativa</title>
+    <style>
+        /* Diseño General */
+        :root {
+            --rojo-bomberos: #e74c3c;
+            --azul-oscuro: #2c3e50;
+            --gris-claro: #f4f7f6;
+            --blanco: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: var(--gris-claro);
+        }
+
+        /* Navegación */
+        nav {
+            background: var(--azul-oscuro);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--blanco);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--rojo-bomberos);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.8)), 
+                        url('https://images.unsplash.com/photo-1516533075015-a3838414c3ca?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--blanco);
+            padding: 0 10%;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 2rem;
+        }
+
+        /* Secciones */
+        section {
+            padding: 4rem 10%;
+        }
+
+        h2 {
+            color: var(--azul-oscuro);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        /* Grid de Características */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--blanco);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--rojo-bomberos);
+        }
+
+        .card h3 {
+            color: var(--rojo-bomberos);
+            margin-top: 0;
+        }
+
+        /* Fases del Proyecto */
+        .fases {
+            background: var(--azul-oscuro);
+            color: var(--blanco);
+        }
+
+        .fases h2 {
+            color: var(--blanco);
+        }
+
+        .fase-item {
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--rojo-bomberos);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a252f;
+            color: var(--blanco);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .highlight {
+            color: var(--rojo-bomberos);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PySL 🚒</div>
+        <div>Ingeniería de Software I</div>
+    </nav>
+
+    <header class="hero">
+        <h1>Prevención y Seguridad Locativa</h1>
+        <p>Optimizando las inspecciones de bomberos en Colombia mediante una gestión digital centralizada y eficiente.</p>
+    </header>
+
+    <section id="problema">
+        <h2>El Desafío Actual</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Gestión Manual</h3>
+                <p>Actualmente, muchas organizaciones realizan inspecciones de forma manual, lo que genera registros incompletos y pérdida de información crítica.</p>
+            </div>
+            <div class="card">
+                <h3>Falta de Trazabilidad</h3>
+                <p>La ausencia de un sistema centralizado dificulta el seguimiento de riesgos y el cumplimiento de normativas como la <span class="highlight">Ley 1575 art. 42</span>.</p>
+            </div>
+            <div class="card">
+                <h3>Retrasos Operativos</h3>
+                <p>Los procesos poco integrados causan demoras en la toma de decisiones y en la implementación de acciones correctivas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="metodologia" class="fases">
+        <h2>Metodología de Desarrollo</h2>
+        <div class="grid">
+            <div class="fase-item">
+                <h4>Fase 1: Análisis</h4>
+                <p>Identificación de necesidades técnicas y requerimientos del sistema de prevención.</p>
+            </div>
+            <div class="fase-item">
+                <h4>Fase 2: Diseño</h4>
+                <p>Elaboración de arquitectura, diagramas y estructura de la base de datos centralizada.</p>
+            </div>
+            <div class="fase-item">
+                <h4>Fase 3: Desarrollo</h4>
+                <p>Construcción del software enfocado en la agilidad y automatización de reportes.</p>
+            </div>
+            <div class="fase-item">
+                <h4>Fase 4: Pruebas e Implementación</h4>
+                <p>Verificación del sistema en entornos reales para asegurar eficiencia operativa.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="impacto">
+        <h2>Impacto Esperado</h2>
+        <div class="grid" style="text-align: center;">
+            <div>
+                <h3 style="font-size: 2.5rem; color: var(--rojo-bomberos);">+Agilidad</h3>
+                <p>Reducción de tiempos en campo mediante captura digital de datos.</p>
+            </div>
+            <div>
+                <h3 style="font-size: 2.5rem; color: var(--rojo-bomberos);">100%</h3>
+                <p>Trazabilidad total de registros para cumplimiento normativo y auditorías.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Proyecto PySL - Cristian Duque & Juan Manuel Londoño</p>
+        <p><small>Basado en normativa de seguridad locativa colombiana (Ley 1801, Ley 1575)</small></p>
+    </footer>
+
+</body>
+</html>
